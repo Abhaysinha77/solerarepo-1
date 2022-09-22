@@ -1,6 +1,7 @@
 package daytwo.interfaceexample;
 
 public interface CalculateArea {
+	public static final int x =10;
 	//abstract method-- without body
 	public int calculateArea(int length, int breadth);
 	
@@ -11,4 +12,6 @@ public interface CalculateArea {
 	static void display() {
 		System.out.println("I am a static method display in an interface");
 	}
+	
+	
 }
