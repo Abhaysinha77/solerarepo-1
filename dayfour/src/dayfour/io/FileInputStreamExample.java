@@ -11,7 +11,7 @@ public class FileInputStreamExample {
 		//InputStream to read data from source and OutputStream to write data to destination
 		//Read a byte from  a file
 		//try {
-			try(FileInputStream fis = new FileInputStream("D:\\output\\prodapt\\output2.txt");){
+			try(FileInputStream fis = new FileInputStream("D:\\output\\solera\\output2.txt");){
 			/**
 			//Read single character from a file
 			System.out.println(fis.read());

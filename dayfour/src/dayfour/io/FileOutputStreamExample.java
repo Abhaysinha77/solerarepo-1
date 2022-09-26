@@ -14,7 +14,7 @@ public class FileOutputStreamExample {
 	//Write a byte in a file
 	 String word = "Good Morning everyone hope you had a wonderful weekend !";
 	 try {
-		FileOutputStream fos = new FileOutputStream("D:\\output\\prodapt\\output.txt");
+		FileOutputStream fos = new FileOutputStream("D:\\output\\solera\\output.txt");
 		fos.write(68);
 		fos.write(65);
 		byte bArr[]= word.getBytes();

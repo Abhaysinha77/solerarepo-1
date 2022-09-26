@@ -13,14 +13,14 @@ public class BufferedReaderAndWriterExample {
 		//Writing the file 
 		//FileWriter fw;
 		try {
-			FileWriter	fw = new FileWriter("D:\\output\\prodapt\\writeFile.txt");
+			FileWriter	fw = new FileWriter("D:\\output\\solera\\writeFile.txt");
 		
 		BufferedWriter buffWriter = new BufferedWriter(fw);
 		buffWriter.write("Java's provide IO related libraries in java.io packages");
 		buffWriter.close();
 		fw.close();
 		//Reading the file 
-		FileReader fr = new FileReader("D:\\output\\prodapt\\writeFile.txt");
+		FileReader fr = new FileReader("D:\\output\\solera\\writeFile.txt");
 		BufferedReader br = new BufferedReader(fr);
 		System.out.println(br.readLine());
 		br.close();

@@ -27,12 +27,12 @@ public class FileReaderWriterExample {
 		}**/
 		try {
 			FileWriter fw;
-			fw = new FileWriter("D:\\output\\prodapt\\writer.txt");
+			fw = new FileWriter("D:\\output\\solera\\writer.txt");
 
 			fw.write("Hello Everyone Enjoy the class of Java");
 			fw.close();
 			
-			FileReader fr = new FileReader("D:\\output\\prodapt\\writer.txt");
+			FileReader fr = new FileReader("D:\\output\\solera\\writer.txt");
 			int i=0;
 			while ((i=fr.read()) !=-1){
 				System.out.println((char) i);
