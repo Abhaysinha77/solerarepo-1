@@ -11,48 +11,50 @@ import java.io.ObjectOutputStream;
 public class SerializationDemo {
 
 	public static void main(String[] args) {
-		 Employee e = new Employee();
-		 e.setEmpId(11);
-		 e.setEmpName("Rajesh");
-		 
-		 System.out.println(e);
-		 
-		 //Serialize an Object e 
-		 //Write an object into a file system
-		 File file = new File("D:\\output\\prodapt\\serializedObject.txt");
-		 FileOutputStream fos;
-		 try {
-			 fos= new FileOutputStream(file);
-			 ObjectOutputStream oos= new ObjectOutputStream(fos);
-			 oos.writeObject(e);
-			 oos.close();
-			 fos.close();
-		 }catch(FileNotFoundException fnfe) {
-			 fnfe.printStackTrace();
-		 }catch(IOException ioe) {
-			 ioe.printStackTrace();
-		 }
-		 
-		 //Deserialize
-		 Employee emp;
-		 try(FileInputStream fis = new FileInputStream(file);
-			 ObjectInputStream ois = new ObjectInputStream(fis);	 
-				 ){
+		Student student = new Student();
+		student.setStudentId(1);
+		student.setStudentName("Rohit");
 		
-				emp =  (Employee) ois.readObject();
-				System.out.println("Deserialized object ----"+emp);
+		System.out.println(student);
+		//Serialize an object student1
+		//Wrtie an object into a file system
+		File file = new File ("D:\\output\\solera\\serializedObject.txt");
+		FileOutputStream fos;
 		
-		 } catch (FileNotFoundException e1) {
-			
-			e1.printStackTrace();
-		} catch (IOException e1) {
+		try {
+			fos= new FileOutputStream(file);
+	
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		oos.writeObject(student);
+		oos.close();
+		fos.close();
 		
-			e1.printStackTrace();
-		} catch (ClassNotFoundException e1) {
-		
-			e1.printStackTrace();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-
+		
+		//Deserialize
+		Student student1 ;
+		try(FileInputStream fis = new FileInputStream(file);
+			ObjectInputStream ois = new ObjectInputStream(fis);){
+			student1 = (Student)  ois.readObject();
+			System.out.println("Desrialized object ---"+student1);
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
