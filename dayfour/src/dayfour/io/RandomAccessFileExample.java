@@ -10,7 +10,7 @@ public class RandomAccessFileExample {
 	public static void main(String[] args) {
 		
 		String filePath = "D:\\output\\solera\\randomAccessFile.txt";
-		String data = "Will take break after this example";
+		String data = "Will not take break after this example";
 		
 		int position = 5;
 		int size = 10;
