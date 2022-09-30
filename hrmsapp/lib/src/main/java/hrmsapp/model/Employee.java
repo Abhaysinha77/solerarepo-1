@@ -13,13 +13,24 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Employee {
+public class Employee implements Comparable{
 	private Integer id;
 	private String name;
 	private LocalDate dateOfBirth;
 	private Double salary;
 	//HAS-A
 	private Address address;
+	@Override
+	public int compareTo(Object o) {
+		if(this.id == ((Employee)o).id) {
+			return 0;
+		}else if (this.id <((Employee) o).id) {
+			return 1;
+		}else {
+			return -1;
+		}
+		
+	}
 	
 	
 }
